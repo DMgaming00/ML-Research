@@ -139,3 +139,8 @@ This repository is an educational research reproduction created to deepen my und
 - PyTorch
 - Hugging Face
 - Google Research
+
+---
+
+## Author
+Dev Mulchandani
