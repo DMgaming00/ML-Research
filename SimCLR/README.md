@@ -1,4 +1,4 @@
-#SimCLR Reproduction
+# SimCLR Reproduction
 **SimCLR: A Simple Framework for Contrastive Learning of Visual Representations**  
 *(Ting Chen, Simon Kornblith, Mohammad Norouzi, Geoffrey Hinton)*
 
