@@ -1,4 +1,4 @@
-# Week 01: SimCLR Reproduction
+#SimCLR Reproduction
 **SimCLR: A Simple Framework for Contrastive Learning of Visual Representations**  
 *(Ting Chen, Simon Kornblith, Mohammad Norouzi, Geoffrey Hinton)*
 
@@ -23,9 +23,6 @@ Week01-SimCLR/
 ├── results/
 │   ├── training_loss.png           # (See your local plots here)
 │   └── tsne_embeddings.png         # (See your local plots here)
-├── career/
-│   ├── interview_questions.md      # 20 NVIDIA-level ML engineering questions
-│   └── linkedin_post.md            # Draft for sharing this project
 ├── reflection.md                   # My personal research diary & takeaways
 ├── requirements.txt                # Project dependencies
 └── README.md                       # This file
@@ -40,7 +37,3 @@ The fully implemented pipeline successfully clusters images based purely on stru
 1. Install dependencies: `pip install -r requirements.txt`
 2. Open `implementation/SimCLR_Notebook.ipynb` in Google Colab (or a local Jupyter environment with GPU acceleration).
 3. The notebook is fully self-contained and will automatically download the CIFAR-10 dataset via HuggingFace's CDN.
-
-## Future Work
-- Implement MoCo (Momentum Contrast) to solve the large batch size compute requirement.
-- Extend this framework to dense prediction tasks (e.g., semantic segmentation).
