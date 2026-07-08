@@ -1,39 +1,142 @@
-# SimCLR Reproduction
-**SimCLR: A Simple Framework for Contrastive Learning of Visual Representations**  
-*(Ting Chen, Simon Kornblith, Mohammad Norouzi, Geoffrey Hinton)*
+# SimCLR: A Simple Framework for Contrastive Learning of Visual Representations
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1FOZy5PntjE8gKH595O_E3x1ZKjaKLFY_?usp=sharing)
+
+**Paper:** https://arxiv.org/abs/2002.05709
+
+A research-oriented reproduction of **SimCLR** implemented in PyTorch as part of my Machine Learning Research Journey. This project goes beyond implementing the paper by documenting the intuition, engineering decisions, mathematical concepts, experimental workflow, and critical analysis behind SimCLR.
+
+---
 
 ## Project Overview
-This repository contains a complete, research-grade PyTorch reproduction of SimCLR, produced during Week 1 of my ML Research journey. It is designed as a comprehensive breakdown of the paper, moving beyond theory into a fully functional training and linear evaluation pipeline.
+
+This repository contains a complete, research-oriented reproduction of **SimCLR**, one of the most influential papers in self-supervised representation learning.
+
+The notebook covers:
+
+- Evolution of representation learning leading to SimCLR
+- Complete PyTorch implementation
+- NT-Xent loss from scratch
+- Training pipeline
+- Representation visualization using t-SNE
+- Linear Evaluation Protocol
+- Ablation studies
+- Engineering decisions
+- Research notes and critical review
+- NVIDIA-style interview questions
+
+---
 
 ## Motivation
-Self-supervised learning (SSL) is revolutionizing deep neural networks by eliminating the bottleneck of human-annotated labels. SimCLR represents a massive milestone in SSL. By mastering SimCLR, we gain a fundamental understanding of Contrastive Learning architectures, the critical role of data augmentations, and the mechanics of the NT-Xent loss.
 
-## Repository Architecture
+Self-supervised learning is changing how deep learning models are trained by reducing dependence on labeled datasets.
+
+SimCLR demonstrated that carefully designed data augmentations and contrastive learning can produce high-quality visual representations without human annotations.
+
+The goal of this project is not only to reproduce the paper but also to understand **why** each design decision works.
+
+---
+
+## Repository Structure
 
 ```text
 Week01-SimCLR/
 ├── implementation/
-│   └── SimCLR_Notebook.ipynb       # The complete PyTorch training & evaluation pipeline
+│   └── SimCLR_Notebook.ipynb
 ├── docs/
-│   ├── 01_research_notes.md        # Theoretical breakdown of the paper
-│   ├── 02_beginner_concepts.md     # Intuitive explanations for beginners
-│   ├── 03_paper_walkthrough.md     # Breakdown of the paper's figures
-│   ├── 04_mathematics.md           # The NT-Xent loss explained
-│   └── 05_experiments_and_visualizations.md # Ablation study protocols
+│   ├── 01_research_notes.md
+│   ├── 02_beginner_concepts.md
+│   ├── 03_paper_walkthrough.md
+│   ├── 04_mathematics.md
+│   └── 05_experiments_and_visualizations.md
 ├── results/
-│   ├── training_loss.png           # (See your local plots here)
-│   └── tsne_embeddings.png         # (See your local plots here)
-├── reflection.md                   # My personal research diary & takeaways
-├── requirements.txt                # Project dependencies
-└── README.md                       # This file
+│   ├── training_loss.png
+│   └── tsne_embeddings.png
+├── reflection.md
+├── requirements.txt
+└── README.md
 ```
 
-## Results & Linear Evaluation
-The fully implemented pipeline successfully clusters images based purely on structural similarity without utilizing any labels during the pretraining phase. 
-- **t-SNE Embeddings:** The notebook extracts the $h$ representations and projects them into 2D space, demonstrating clear semantic clustering of CIFAR-10 classes.
-- **Linear Probing:** A logistic regression classifier trained strictly on frozen $h$ embeddings achieves performance validating the quality of the self-supervised representations.
+---
+
+## Results
+
+The implementation successfully learns meaningful visual representations using self-supervised contrastive learning.
+
+Current experiments include:
+
+- Training loss visualization
+- t-SNE embedding visualization
+- Linear Evaluation Protocol
+- Research-driven ablation experiments
+
+---
 
 ## How to Run
-1. Install dependencies: `pip install -r requirements.txt`
-2. Open `implementation/SimCLR_Notebook.ipynb` in Google Colab (or a local Jupyter environment with GPU acceleration).
-3. The notebook is fully self-contained and will automatically download the CIFAR-10 dataset via HuggingFace's CDN.
+
+### Option 1 (Recommended)
+
+Click the **Open in Colab** badge at the top of this page.
+
+### Option 2
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/ML-Research.git
+cd ML-Research/Week01-SimCLR
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Launch Jupyter
+
+```bash
+jupyter notebook
+```
+
+Open
+
+```
+implementation/SimCLR_Notebook.ipynb
+```
+
+---
+
+## Research Questions
+
+Throughout this reproduction I explored questions such as:
+
+- Why do augmentations act as supervision?
+- Why does SimCLR require large batch sizes?
+- Why is the projection head discarded during downstream tasks?
+- Why does contrastive learning produce transferable representations?
+
+---
+
+## Future Work
+
+- Reproduce BYOL
+- Compare SimCLR vs BYOL
+- Study DINO and Vision Transformers
+- Explore Sparse Autoencoders
+- Investigate mechanistic interpretability
+
+---
+
+## Disclaimer
+
+This repository is an educational research reproduction created to deepen my understanding of representation learning and self-supervised learning. It is **not** an official implementation from the paper authors.
+
+---
+
+## Acknowledgements
+
+- Chen et al. (2020), *SimCLR: A Simple Framework for Contrastive Learning of Visual Representations*
+- PyTorch
+- Hugging Face
+- Google Research
