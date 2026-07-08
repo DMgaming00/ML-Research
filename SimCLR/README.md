@@ -23,7 +23,6 @@ The notebook covers:
 - Ablation studies
 - Engineering decisions
 - Research notes and critical review
-- NVIDIA-style interview questions
 
 ---
 
