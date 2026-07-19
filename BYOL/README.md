@@ -2,7 +2,9 @@
 **Bootstrap Your Own Latent: A New Approach to Self-Supervised Learning**
 *(Jean-Bastien Grill, Florian Strub, Florent Altché, Corentin Tallec, Pierre H. Richemond, Elena Buchatskaya, Carl Doersch, Bernardo Avila Pires, Zhaohan Daniel Guo, Mohammad Gheshlaghi Azar, Bilal Piot, Koray Kavukcuoglu, Rémi Munos, Michal Valko — DeepMind, 2020)*
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](#)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/115eTDgmARvr9e9XPTZMazIWtbIcFu_8h?usp=sharing)
+
+**Paper:** https://arxiv.org/abs/2006.07733
 
 ---
 
